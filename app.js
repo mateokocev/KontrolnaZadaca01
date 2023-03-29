@@ -74,7 +74,7 @@ const preokrenutiString = (ulaznaRecenica) => {
 
     for (let i = ulaznaRecenica.length - 1; i >= 0; i--) {
 
-        revUlaznaRecenica = revUlaznaRecenica.push(ulaznaRecenica[i]);
+        revUlaznaRecenica = revUlaznaRecenica.concat(ulaznaRecenica[i]);
 
         if(ulaznaRecenica[i] !== ' ') {
             brojac++;
@@ -85,7 +85,7 @@ const preokrenutiString = (ulaznaRecenica) => {
 }
 
 const ulaznaRecenica = "Pisanje zadataka nije jednostavan posao";
-
+preokrenutiString(ulaznaRecenica);
 
 //4 (4 BODA)
 //Napisi funkciju koja vraca najkraci kljuc u danom objektu
@@ -96,6 +96,23 @@ const somePeople = {
     Kent: "Beck",
     Martin: "Fowler",
     Erich: "Gamma"
+}
+
+const najkraciKljuc = (somePeople) => {
+
+    let duzinaKljuca = 100;
+    let najduziKljuc = '';
+
+    for (const key in somePeople) {
+
+        if(key.length < duzinaKljuca) {
+
+            najduziKljuc = key;
+
+        }
+
+    }
+
 }
 //INPUT: somePeople
 //OUTPUT: "Ada"
