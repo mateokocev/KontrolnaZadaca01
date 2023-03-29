@@ -4,21 +4,88 @@
 const jeLiParni = () => {
 
     for (let i = 0; i <= 100 ; i++) {
-        const element = array[i];
-        while()
+
+        if(i % 2 === 0 && i !== 0) {
+            console.log(i);
+
+        }
+
     }
 
 }
+
+jeLiParni();
 
 //2 (3 BODA)
 //Napisi funkciju koja koristi switch selekciju za pretvaranje numerickog unosa u dan u tjednu. Za neispravan unos ispisi prikladnu poruku.
 //INPUT: 1; OUTPUT: "Ponedjeljak";
 //INPUT: 5; OUTPUT: "Petak"; 
 
+const kojiJeDan = (redniBrojDana) => {
+
+    switch (redniBrojDana) {
+        case 1:
+            console.log("Ponedjeljak");
+            break;
+
+        case 2:
+            console.log("Utorak");
+            break;
+
+        case 3:
+            console.log("Srijeda");
+            break;
+
+        case 4:
+            console.log("Četvrtak");
+            break;
+
+        case 5:
+            console.log("Petak");
+            break;
+
+        case 6:
+            console.log("Subota");
+            break;
+
+        case 7:
+            console.log("Nedjelja");
+            break;
+        
+        default:
+            console.log("Invalid number!");
+            break;
+    }
+
+}
+
+const redniBrojDana = 2;
+kojiJeDan(redniBrojDana);
+
 //3 (4 BODA)
 //Napisi funkciju koja okrece uneseni string i broji charactere ne uzimajuci u obzir prazna mjesta (eng. whitespaces)
 //INPUT: "Pisanje zadataka nije jednostavan posao";
 //OUTPUT: ("oasop navatsondej ejin akatadaz ejnasiP", 35)
+
+const preokrenutiString = (ulaznaRecenica) => {
+
+    let revUlaznaRecenica = '';
+    let brojac = 0;
+
+    for (let i = ulaznaRecenica.length - 1; i >= 0; i--) {
+
+        revUlaznaRecenica = revUlaznaRecenica.push(ulaznaRecenica[i]);
+
+        if(ulaznaRecenica[i] !== ' ') {
+            brojac++;
+        }
+    }
+
+    console.log(revUlaznaRecenica, ", ", brojac);
+}
+
+const ulaznaRecenica = "Pisanje zadataka nije jednostavan posao";
+
 
 //4 (4 BODA)
 //Napisi funkciju koja vraca najkraci kljuc u danom objektu
