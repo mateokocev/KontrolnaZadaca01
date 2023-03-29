@@ -107,13 +107,18 @@ const najkraciKljuc = (somePeople) => {
 
         if(key.length < duzinaKljuca) {
 
-            najduziKljuc = key;
+            najduziKljuc = some;
 
         }
 
     }
 
+    console.log(najduziKljuc);
 }
+
+najkraciKljuc(somePeople);
+// booooooo
+
 //INPUT: somePeople
 //OUTPUT: "Ada"
 
@@ -151,5 +156,10 @@ const someEvents = [
         eventYear: 1995,
     },
 ];
+
+const kvadrirajUlaz = () => {
+
+    
+}
 //INPUT: (someEvents, 1992)
 //OUTPUT: [{eventName: "Izasao je Python", eventYear: 1991}, {eventName: "Izasao je C++", eventYear: 1985}]
