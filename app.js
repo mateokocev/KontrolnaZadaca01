@@ -174,6 +174,24 @@ const someEvents = [
     },
 ];
 
+const eventoviPoslije = (someEvents, trazenaGodina) => {
+
+    let noviArray =[];
+
+    for (const i in someEvents) {
+
+        if (someEvents.eventYear < trazenaGodina) {
+            
+            noviArray.push(someEvents[i]);
+
+        }
+    }
+
+    return noviArray;
+}
+
+const trazenaGodina = 1992;
+console.log(eventoviPoslije(someEvents, trazenaGodina));
 
 //INPUT: (someEvents, 1992)
 //OUTPUT: [{eventName: "Izasao je Python", eventYear: 1991}, {eventName: "Izasao je C++", eventYear: 1985}]
