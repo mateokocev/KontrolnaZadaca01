@@ -107,7 +107,7 @@ const najkraciKljuc = (somePeople) => {
 
         if(key.length < duzinaKljuca) {
 
-            najduziKljuc = some;
+            najduziKljuc = somePeople[key];
 
         }
 
@@ -131,6 +131,23 @@ najkraciKljuc(somePeople);
 //Napisi funkciju u obliku arrow functiona koja kvadrira i vraca dane inpute
 //INPUT: [2, 4, 6, 0, 1]
 //OUTPUT: [4, 16, 36, 0, 1]
+
+const kvadrirajUlaz = (ulazniArray) => {
+
+    let pomocniArray = [];
+
+    for (const i of ulazniArray) {
+        
+        pomocniArray.push(i*i);
+
+    }
+
+    return pomocniArray;
+}
+
+const ulazniArray = [2, 4, 6, 0, 1];
+console.log(kvadrirajUlaz(ulazniArray));
+
 
 //6 (4 BODA)
 //Napisi funkciju koja vraca sve dogadaje koji su se dogodili prije od vrijednosti iz ulaznog parametra
@@ -157,9 +174,6 @@ const someEvents = [
     },
 ];
 
-const kvadrirajUlaz = () => {
 
-    
-}
 //INPUT: (someEvents, 1992)
 //OUTPUT: [{eventName: "Izasao je Python", eventYear: 1991}, {eventName: "Izasao je C++", eventYear: 1985}]
