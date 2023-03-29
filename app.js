@@ -14,7 +14,7 @@ const jeLiParni = () => {
 
 }
 
-jeLiParni();
+// jeLiParni();
 
 //2 (3 BODA)
 //Napisi funkciju koja koristi switch selekciju za pretvaranje numerickog unosa u dan u tjednu. Za neispravan unos ispisi prikladnu poruku.
@@ -60,7 +60,7 @@ const kojiJeDan = (redniBrojDana) => {
 }
 
 const redniBrojDana = 2;
-kojiJeDan(redniBrojDana);
+// kojiJeDan(redniBrojDana);
 
 //3 (4 BODA)
 //Napisi funkciju koja okrece uneseni string i broji charactere ne uzimajuci u obzir prazna mjesta (eng. whitespaces)
@@ -85,7 +85,7 @@ const preokrenutiString = (ulaznaRecenica) => {
 }
 
 const ulaznaRecenica = "Pisanje zadataka nije jednostavan posao";
-preokrenutiString(ulaznaRecenica);
+// preokrenutiString(ulaznaRecenica);
 
 //4 (4 BODA)
 //Napisi funkciju koja vraca najkraci kljuc u danom objektu
@@ -116,8 +116,8 @@ const najkraciKljuc = (somePeople) => {
     console.log(najduziKljuc);
 }
 
-najkraciKljuc(somePeople);
-// booooooo
+// najkraciKljuc(somePeople);
+// neznam accessati ime kljuca
 
 //INPUT: somePeople
 //OUTPUT: "Ada"
@@ -146,7 +146,7 @@ const kvadrirajUlaz = (ulazniArray) => {
 }
 
 const ulazniArray = [2, 4, 6, 0, 1];
-console.log(kvadrirajUlaz(ulazniArray));
+// console.log(kvadrirajUlaz(ulazniArray));
 
 
 //6 (4 BODA)
@@ -178,20 +178,21 @@ const eventoviPoslije = (someEvents, trazenaGodina) => {
 
     let noviArray =[];
 
-    for (const i in someEvents) {
+    for (let i of someEvents) {
 
-        if (someEvents.eventYear < trazenaGodina) {
+        if (i.eventYear < trazenaGodina) {
             
-            noviArray.push(someEvents[i]);
+            noviArray.push(i);
 
         }
+
     }
 
     return noviArray;
 }
 
 const trazenaGodina = 1992;
-console.log(eventoviPoslije(someEvents, trazenaGodina));
+// console.log(eventoviPoslije(someEvents, trazenaGodina));
 
 //INPUT: (someEvents, 1992)
 //OUTPUT: [{eventName: "Izasao je Python", eventYear: 1991}, {eventName: "Izasao je C++", eventYear: 1985}]
